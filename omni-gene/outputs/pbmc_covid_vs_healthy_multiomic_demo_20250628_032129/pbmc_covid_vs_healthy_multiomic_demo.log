@@ -1,0 +1,4 @@
+[2025-06-28 03:21:29] [INFO] Run directory created at: outputs/pbmc_covid_vs_healthy_multiomic_demo_20250628_032129
+[2025-06-28 03:21:29] [INFO] Initialization complete.
+[2025-06-28 03:21:29] [INFO] Starting Omni-Gene v1.0.0 pipeline.
+[2025-06-28 03:21:29] [INFO] Loading Transcriptome data from: data/rna/sample1.h5ad

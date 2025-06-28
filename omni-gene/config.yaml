@@ -1,0 +1,77 @@
+# =================================================================
+#        Omni-Gene: AI-Powered Multi-Omics Pipeline Config
+# =================================================================
+# This is the main configuration file for an Omni-Gene analysis run.
+# Edit the paths and parameters below to match your specific experiment.
+
+# --- Core Parameters ---
+# A unique name for your analysis run. All outputs will be saved in a 
+# subfolder with this name inside the main 'outputs' directory.
+analysis_name: "pbmc_covid_vs_healthy_multiomic_demo"
+
+# --- Species Configuration ---
+# This section specifies the organism for your study, which is crucial for
+# correct gene annotations.
+#
+# INSTRUCTIONS:
+# To select a species, make sure only ONE 'species' line is active (not commented out with '#').
+# To switch to a different species, add a '#' to the beginning of the current active line
+# and remove the '#' from the line with the species you want to use.
+
+species: "human"
+# species: "mouse"
+# species: "rat"
+# species: "zebrafish"
+# species: "fruitfly"
+# species: "macaque"
+
+# --- Input Data Paths ---
+# Provide the full path to the data file or directory for each omics
+# type you want to include in the analysis. If you are not using a
+# specific data type, you can comment it out (using '#') or remove the line.
+data_paths:
+  # Path to single-cell RNA-seq data. Can be a single .h5ad file,
+  # a .h5 file from Cell Ranger, or a directory containing MEX files.
+  RNA: "data/rna/single_cell_data.h5ad"
+  
+  # Path to proteomics data. Expected to be a CSV file where the first
+  # column contains protein IDs and subsequent columns contain sample abundances.
+  Proteomics: "data/proteomics/protein_abundance.csv"
+  
+  # Path to genomics variant data. Expected to be a standard VCF file,
+  # preferably compressed with bgzip and indexed.
+  Genomics: "data/genomics/NA12878_pav_svtigs_merged.vcf.gz"
+
+# Path to the metadata file. This CSV file must have sample identifiers
+# in the first column that match the sample names in your data files.
+metadata_file: "data/metadata.csv"
+
+# --- Output Directory ---
+# The main directory where all analysis output folders will be saved.
+output_dir: "outputs/"
+
+# --- AI & Analysis Parameters ---
+# If true, the AI Validator will perform detailed checks on your input data
+# and metadata before running the main pipeline. Highly recommended.
+run_ai_validator: true
+
+# The name of the column in your metadata_file that defines the groups
+# you want to compare (e.g., 'condition', 'treatment', 'disease_state').
+# This is required for differential analysis.
+de_comparison_attribute: "condition"
+
+# The resolution for the Leiden clustering algorithm. Higher values will
+# result in more, smaller clusters. A good starting point is between 0.5 and 1.5.
+leiden_resolution: 0.8
+
+# --- Advanced QC Parameters (Optional) ---
+# You can override the default Quality Control (QC) parameters here if needed.
+# These parameters are applied to the RNA-seq data.
+qc_min_genes: 200      # Minimum number of genes expressed per cell to keep it.
+qc_max_genes: 6000     # Maximum number of genes expressed per cell (helps filter doublets).
+qc_max_pct_mt: 20      # Maximum percentage of mitochondrial gene content per cell.
+
+# --- Reproducibility ---
+# Setting a random seed ensures that analyses with a random component
+# (like PCA and UMAP) are reproducible and give the same result every time.
+random_seed: 1253

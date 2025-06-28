@@ -1,0 +1,2 @@
+[console_scripts]
+omnigene = omni_gene.cli:main

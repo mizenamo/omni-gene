@@ -1,0 +1,6 @@
+[2025-06-28 05:31:09] [INFO] Run directory created at: outputs/pbmc_covid_vs_healthy_multiomic_demo_20250628_053109
+[2025-06-28 05:31:09] [INFO] Initialization complete.
+[2025-06-28 05:31:09] [INFO] Starting Omni-Gene v1.0.0 pipeline.
+[2025-06-28 05:31:09] [INFO] Loading Transcriptome data from: data/rna/single_cell_data.h5ad
+[2025-06-28 05:31:09] [INFO] Loading Proteome data from: data/proteomics/protein_abundance.csv
+[2025-06-28 05:31:09] [INFO] Loading Genome data from: data/genomics/NA12878_pav_svtigs_merged.vcf.gz

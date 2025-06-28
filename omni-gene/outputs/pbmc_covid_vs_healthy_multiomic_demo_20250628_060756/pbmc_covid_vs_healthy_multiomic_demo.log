@@ -1,0 +1,12 @@
+[2025-06-28 06:07:56] [INFO] Run directory created at: outputs/pbmc_covid_vs_healthy_multiomic_demo_20250628_060756
+[2025-06-28 06:07:56] [INFO] Initialization complete.
+[2025-06-28 06:07:56] [INFO] Starting Omni-Gene v1.0.0 pipeline.
+[2025-06-28 06:07:56] [INFO] Loading Transcriptome data from: data/rna/single_cell_data.h5ad
+[2025-06-28 06:07:56] [INFO] Loading Proteome data from: data/proteomics/protein_abundance.csv
+[2025-06-28 06:07:56] [INFO] Loading Genome data from: data/genomics/NA12878_pav_svtigs_merged.vcf.gz
+[2025-06-28 06:07:57] [ERROR] Failed to load or process VCF file 'data/genomics/NA12878_pav_svtigs_merged.vcf.gz'. Error: 'numpy.ndarray' object has no attribute 'count_alleles'
+[2025-06-28 06:07:57] [ERROR] Please ensure the VCF file is valid and bgzip-compressed if it ends with .gz.
+[2025-06-28 06:07:57] [INFO] Harmonizing samples for modality: Prot
+[2025-06-28 06:07:57] [WARNING] No common samples found between RNA and prot. Skipping this modality.
+[2025-06-28 06:07:57] [INFO] All data loaded and harmonized for 200 common samples.
+[2025-06-28 06:07:57] [INFO] Applying best-practice preprocessing to RNA layer...

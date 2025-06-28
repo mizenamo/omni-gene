@@ -1,0 +1,4 @@
+SampleID,condition,age
+PBMC_1k_Donor1,control,35
+Sample_2,treatment,42
+Sample_3,control,28

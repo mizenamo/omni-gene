@@ -1,0 +1,7 @@
+# This file specifies the build system for the Omni-Gene package.
+# It tells tools like pip how to build the project from source.
+# For a setuptools-based project, this configuration is standard.
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

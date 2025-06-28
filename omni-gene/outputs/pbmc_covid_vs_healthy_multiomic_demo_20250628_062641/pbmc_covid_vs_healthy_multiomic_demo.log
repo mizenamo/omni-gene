@@ -1,0 +1,10 @@
+[2025-06-28 06:26:41] [INFO] Run directory created at: outputs/pbmc_covid_vs_healthy_multiomic_demo_20250628_062641
+[2025-06-28 06:26:41] [INFO] Initialization complete.
+[2025-06-28 06:26:41] [INFO] Starting Omni-Gene v1.0.0 pipeline.
+[2025-06-28 06:26:41] [INFO] Loading Transcriptome data from: data/rna/single_cell_data.h5ad
+[2025-06-28 06:26:41] [INFO] -> Found RNA data with 200 cells/samples. Sample IDs begin with: ['Cell_0', 'Cell_1', 'Cell_2']...
+[2025-06-28 06:26:41] [INFO] Loading Proteome data from: data/proteomics/protein_abundance.csv
+[2025-06-28 06:26:41] [INFO] -> Found Proteomics data with 3 samples. Sample IDs are: ['PBMC_1k_Donor1', 'Sample_2', 'Sample_3']...
+[2025-06-28 06:26:41] [INFO] Loading Genome data from: data/genomics/NA12878_pav_svtigs_merged.vcf.gz
+[2025-06-28 06:26:41] [WARNING] VCF file did not contain expected genotype data ('calldata/GT'). Skipping Genomics.
+[2025-06-28 06:26:41] [INFO] Harmonizing samples across all loaded modalities...

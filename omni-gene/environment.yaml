@@ -1,0 +1,28 @@
+# Conda environment definition for the Omni-Gene platform
+name: omnigene_env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # Core Python version
+  - python=3.9
+  
+  # Core data science libraries
+  - pandas
+  - numpy
+  - scikit-learn
+  
+  # Plotting
+  - matplotlib
+  - seaborn
+
+  # Bioinformatics
+  - scanpy
+  - pysam         # For reading BAM/SAM files
+  - scikit-allel  # THE NEW LIBRARY for reading VCF files
+
+  # Utilities
+  - pyyaml # For reading config files
+  - rich   # For beautiful terminal output
+  - pip
